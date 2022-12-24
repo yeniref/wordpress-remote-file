@@ -11,7 +11,7 @@ class FileUploadRemote {
             if (strstr($file_headers[0], '200 OK')) {
                 $baslik = ($baslik == NULL) ? md5(time()) : $baslik;
                 echo $baslik;
-                $uzantilar = ["jpg", "jpeg", "png", "webp"];
+                $uzantilar = ["jpg", "jpeg", "png", "webp","zip"];
                 foreach ($uzantilar as $uzanti_bul) {
                     if (strstr($file, $uzanti_bul)) {
                         $uzanti = $uzanti_bul;
