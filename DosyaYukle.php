@@ -12,7 +12,7 @@ class FileUploadRemote {
         $uzanti = $filetype['ext'];
         $filename = sanitize_title($baslik) . md5(rand(0, 50)) . "." . $uzanti;
 
-        $upload = wp_upload_bits($filename, 'null', $this->MyCurl($file));
+        $upload = wp_upload_bits($filename, 'null', file_get_content($file));
         if (empty($upload['error'])) {
             $attachment = array(
                 'guid'           => $upload['url'],
