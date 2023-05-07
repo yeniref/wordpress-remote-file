@@ -51,3 +51,5 @@ class FileUploadRemote {
 $yukle = new FileUploadRemote;
 
 print_r($yukle->DosyaYukle("https://i.stack.imgur.com/cskyi.png"));
+print_r($yukle->DosyaYukle("https://i.stack.imgur.com/cskyi.png","Başlık"));
+
